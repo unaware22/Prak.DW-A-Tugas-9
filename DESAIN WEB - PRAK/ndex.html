@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+  <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="bg-[#EEEEEE] dark:bg-customdark text-gray-800 dark:text-customFont font-sans min-h-screen">
+  <!-- Konten akan ditambahkan di sini -->
+  <header class="bg-customHeader text-white p-4 fixed w-full items-center h-auto">
+    <div class="container mx-auto flex justify-between">
+      <h1 class="text-2xl font-bold">GALERI FOTO</h1>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="dark-mode-toggle" class="sr-only peer">
+        <div class=" w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:bg-blue-600">
+        </div>
+        <span class="ml-3 text-slg font-normal text-white dark:text-gray-300">Dark Mode</span>
+      </label>
+    </div>
+  </header>
+  
+  
+  <section class="py-10">
+    <div class="container mx-auto text-center text-gray-800 dark:text-white">
+      <h2 class="text-4xl font-bold mb-4 mt-24">SELAMAT DATANG DI GALERI KAMI</h2>
+      <p class="text-lg mb-8">KOLEKSI FOTO TERBAIK UNTUK ANDA.</p>
+    </div>
+  </section>
+  <section class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/pizza.jpg" alt="Foto 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">PIZZA</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 1.</p>
+        </div>
+      </div>
+      <!-- Tambahkan Card 2, 3, dst. dengan struktur yang sama -->
+      <!-- Card 2 -->
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/sushi2.jpeg" alt="Foto 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">SUSHI</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 2.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/rendang.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">RENDANG</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/tomyum.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">TOM YUM GOONG</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/tacos1.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">TACOS</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/pastacarbo.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">PASTA CARBONARA</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/laksa.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">LAKSA</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <div class="bg-[#F8F8FA] dark:bg-customCard rounded-lg shadow-md overflow-hidden">
+        <img src="img/biryani.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">BIRYANI</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+  </section>
+  <footer class="bg-customHeader text-white p-4 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Galeri Foto. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const toggleDarkMode = document.getElementById('dark-mode-toggle');
+    const htmlElement = document.documentElement;
+  
+    toggleDarkMode.addEventListener('change', () => {
+      htmlElement.classList.toggle('dark', toggleDarkMode.checked);
+    });
+  </script>
+  
+</body>
+</html>
